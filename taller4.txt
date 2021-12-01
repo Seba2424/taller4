@@ -1,0 +1,9 @@
+clases:
+	-Desastres
+	-Desastre(especifico)
+	-FileManager
+	-TextInputPanel
+	-Main
+	-desastresWindow
+	-agregarDesastreWindow
+	
