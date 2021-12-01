@@ -40,6 +40,7 @@ public class FileManager {
 			e.printStackTrace();
 		}
 		return desastres;
+
 	}
 
 	private static Desastre parseRowToContact(String row) {

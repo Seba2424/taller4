@@ -1,6 +1,7 @@
 package modelo;
 
 public class Desastre {
+
 	private long id;
 	private String nombre;
 	private String cantidad;
@@ -22,6 +23,7 @@ public class Desastre {
 		this.añoTopeDePersonasAfectadas=añoTopeDePersonasAfectadas;
 		this.añoTopeDeImpactosEconomicos=añoTopeDeImpactosEconomicos;
 		contador++;
+		System.out.println();
 
 	}
 	public Desastre(String nombre,String cantidad,String topeCantidadDePersonasAfectadas, String topeCantidadImpactoEconomico, String añoTopeDeCantidad,
@@ -120,4 +122,5 @@ public class Desastre {
 	public void setContador(long contador) {
 		this.contador = contador;
 	}
+
 }

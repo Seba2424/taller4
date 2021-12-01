@@ -9,6 +9,6 @@ public class AgregarDesastreWindow {
 	private TextInputPanel añoTopeDPAInput;
 	private TextInputPanel añoTopeDIEInput;
 	private TextInputPanel previousFrame;
-	public TextInputPanel unnamed_TextInputPanel_;
-	public DesastresWindow unnamed_DesastresWindow_;
+	public TextInputPanel unnamed_TextInputPanel;
+	public DesastresWindow unnamed_DesastresWindow;
 }
