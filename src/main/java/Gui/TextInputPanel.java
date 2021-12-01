@@ -1,15 +1,22 @@
 package Gui;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class TextInputPanel {
+public class TextInputPanel extends JPanel{
 	private JTextField textField;
 
 	public TextInputPanel(String label) {
-		throw new UnsupportedOperationException();
+		setLayout(new FlowLayout());
+
+		JLabel fieldLabel = new JLabel(label);
+		add(fieldLabel);
+
+		textField = new JTextField(20);
+		add(textField);
 	}
 
 	public String getValue() {
-		throw new UnsupportedOperationException();
+		return this.textField.getText();
 	}
 }
