@@ -1,9 +1,11 @@
 package Gui;
 
-public class TextInputPanel {
-	private JTextField _textField;
+import javax.swing.*;
 
-	public TextInputPanel(String aLabel) {
+public class TextInputPanel {
+	private JTextField textField;
+
+	public TextInputPanel(String label) {
 		throw new UnsupportedOperationException();
 	}
 

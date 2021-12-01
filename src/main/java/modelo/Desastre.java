@@ -1,85 +1,123 @@
 package modelo;
 
 public class Desastre {
-	private long _id;
-	private String _nombre;
-	private int _cantidad;
-	private int _topeCantidadDePersonasAfectadas;
-	private int _topeCantidadImpactoEconomico;
-	private int _a�oTopeDeCantidad;
-	private int _a�oTopeDePersonasAfectadas;
-	private int _a�oTopeDeImpactosEconomicos;
-	private long _contador;
+	private long id;
+	private String nombre;
+	private String cantidad;
+	private String topeCantidadDePersonasAfectadas;
+	private String topeCantidadImpactoEconomico;
+	private String añoTopeDeCantidad;
+	private String añoTopeDePersonasAfectadas;
+	private String añoTopeDeImpactosEconomicos;
+	private static long contador =1;
 
-	public long getId() {
-		return this._id;
+	public Desastre(long id, String nombre, String cantidad, String topeCantidadDePersonasAfectadas, String topeCantidadImpactoEconomico, String añoTopeDeCantidad,
+					String añoTopeDePersonasAfectadas, String añoTopeDeImpactosEconomicos){
+		this.id=id;
+		this.nombre=nombre;
+		this.cantidad=cantidad;
+		this.topeCantidadDePersonasAfectadas=topeCantidadDePersonasAfectadas;
+		this.topeCantidadImpactoEconomico=topeCantidadImpactoEconomico;
+		this.añoTopeDeCantidad=añoTopeDeCantidad;
+		this.añoTopeDePersonasAfectadas=añoTopeDePersonasAfectadas;
+		this.añoTopeDeImpactosEconomicos=añoTopeDeImpactosEconomicos;
+		contador++;
+
+	}
+	public Desastre(String nombre,String cantidad,String topeCantidadDePersonasAfectadas, String topeCantidadImpactoEconomico, String añoTopeDeCantidad,
+					String añoTopeDePersonasAfectadas, String añoTopeDeImpactosEconomicos){
+		this.id=contador++;
+		this.nombre=nombre;
+		this.cantidad=cantidad;
+		this.topeCantidadDePersonasAfectadas=topeCantidadDePersonasAfectadas;
+		this.topeCantidadImpactoEconomico=topeCantidadImpactoEconomico;
+		this.añoTopeDeCantidad=añoTopeDeCantidad;
+		this.añoTopeDePersonasAfectadas=añoTopeDePersonasAfectadas;
+		this.añoTopeDeImpactosEconomicos=añoTopeDeImpactosEconomicos;
+	}
+	public String[] toTableRow(){
+		String[] row = {
+				String.valueOf(this.id),
+				this.nombre,
+				this.cantidad,
+				this.topeCantidadDePersonasAfectadas,
+				this.topeCantidadImpactoEconomico,
+				this.añoTopeDeCantidad,
+				this.añoTopeDePersonasAfectadas,
+				String.valueOf(this.añoTopeDeImpactosEconomicos)
+		};
+		return row;
 	}
 
-	public void setId(long aId) {
-		this._id = aId;
+	public long getId() {
+		return this.id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getNombre() {
-		return this._nombre;
+		return this.nombre;
 	}
 
-	public void setNombre(String aNombre) {
-		this._nombre = aNombre;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public int getCantidad() {
-		return this._cantidad;
+	public String getCantidad() {
+		return this.cantidad;
 	}
 
-	public void setCantidad(int aCantidad) {
-		this._cantidad = aCantidad;
+	public void setCantidad(String cantidad) {
+		this.cantidad = cantidad;
 	}
 
-	public int getTopeCantidadDePersonasAfectadas() {
-		return this._topeCantidadDePersonasAfectadas;
+	public String getTopeCantidadDePersonasAfectadas() {
+		return this.topeCantidadDePersonasAfectadas;
 	}
 
-	public void setTopeCantidadDePersonasAfectadas(int aTopeCantidadDePersonasAfectadas) {
-		this._topeCantidadDePersonasAfectadas = aTopeCantidadDePersonasAfectadas;
+	public void setTopeCantidadDePersonasAfectadas(String topeCantidadDePersonasAfectadas) {
+		this.topeCantidadDePersonasAfectadas = topeCantidadDePersonasAfectadas;
 	}
 
-	public int getTopeCantidadImpactoEconomico() {
-		return this._topeCantidadImpactoEconomico;
+	public String getTopeCantidadImpactoEconomico() {
+		return this.topeCantidadImpactoEconomico;
 	}
 
-	public void setTopeCantidadImpactoEconomico(int aTopeCantidadImpactoEconomico) {
-		this._topeCantidadImpactoEconomico = aTopeCantidadImpactoEconomico;
+	public void setTopeCantidadImpactoEconomico(String topeCantidadImpactoEconomico) {
+		this.topeCantidadImpactoEconomico = topeCantidadImpactoEconomico;
 	}
 
-	public int getA�oTopeDeCantidad() {
-		return this._a�oTopeDeCantidad;
+	public String getAñoTopeDeCantidad() {
+		return this.añoTopeDeCantidad;
 	}
 
-	public void setA�oTopeDeCantidad(int aA�oTopeDeCantidad) {
-		this._a�oTopeDeCantidad = aA�oTopeDeCantidad;
+	public void setAñoTopeDeCantidad(String añoTopeDeCantidad) {
+		this.añoTopeDeCantidad = añoTopeDeCantidad;
 	}
 
-	public int getA�oTopeDePersonasAfectadas() {
-		return this._a�oTopeDePersonasAfectadas;
+	public String getAñoTopeDePersonasAfectadas() {
+		return this.añoTopeDePersonasAfectadas;
 	}
 
-	public void setA�oTopeDePersonasAfectadas(int aA�oTopeDePersonasAfectadas) {
-		this._a�oTopeDePersonasAfectadas = aA�oTopeDePersonasAfectadas;
+	public void setAñoTopeDePersonasAfectadas(String añoTopeDePersonasAfectadas) {
+		this.añoTopeDePersonasAfectadas = añoTopeDePersonasAfectadas;
 	}
 
-	public int getA�oTopeDeImpactosEconomicos() {
-		return this._a�oTopeDeImpactosEconomicos;
+	public String getAñoTopeDeImpactosEconomicos() {
+		return this.añoTopeDeImpactosEconomicos;
 	}
 
-	public void setA�oTopeDeImpactosEconomicos(int aA�oTopeDeImpactosEconomicos) {
-		this._a�oTopeDeImpactosEconomicos = aA�oTopeDeImpactosEconomicos;
+	public void setAñoTopeDeImpactosEconomicos(String añoTopeDeImpactosEconomicos) {
+		this.añoTopeDeImpactosEconomicos = añoTopeDeImpactosEconomicos;
 	}
 
 	public long getContador() {
-		return this._contador;
+		return this.contador;
 	}
 
-	public void setContador(long aContador) {
-		this._contador = aContador;
+	public void setContador(long contador) {
+		this.contador = contador;
 	}
 }
